@@ -5,11 +5,12 @@ Scans through maths papers looking for sums; extracts sums as strings, evaluates
 
 |Input| Output|
 |---|---|
-| "1+1" | ["1 + 1", 2] |
-|"1*1" | ["1 * 1", 1] |
-|"1-1" | ["1 - 1", 0] |
-|"1*1-1" | ["1 * 1 - 1", 0] |
+| "1 + 1" | ["1 + 1", 2] |
+|"1 * 1" | ["1 * 1", 1] |
+|"1 - 1" | ["1 - 1", 0] |
+|"1 * 1 - 1" | ["1 * 1 - 1", 0] |
 |"1" | ["1", 1] |
 
 
 operators: can handle any of +, -, *, /
+If no spaces between digit and operator, return "MathError "Input must be a valid mathematical string separated by spaces""

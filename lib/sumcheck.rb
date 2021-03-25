@@ -1,5 +1,12 @@
 class Sumcheck
   def scan(sum)
-    ["1 + 1", 2]
+    sum_array = sum.split(" ")
+    array = []
+    x = 0
+    sum_array.each do |num|
+      x += num.to_i
+    end
+    array << sum
+    array << x
   end
 end

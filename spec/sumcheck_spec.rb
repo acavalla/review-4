@@ -21,5 +21,9 @@ describe Sumcheck do
     it 'can subtract for - operations' do
       expect(subject.scan("1 - 1")).to eq ["1 - 1", 0]
     end
+
+    it 'can divide for / operations' do
+      expect(subject.scan("1 / 1")).to eq ["1 / 1", 1]
+    end
   end
 end

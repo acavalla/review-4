@@ -13,8 +13,10 @@ class Sumcheck
       x = add(sum_array)
     elsif sum_array[1] == "*"
       x = multiply(sum_array)
-    else
+    elsif sum_array[1] == "-"
       x = subtract(sum_array)
+    else
+      x = divide(sum_array)
     end
     return x
   end
@@ -29,7 +31,6 @@ class Sumcheck
 
   def subtract(sum_array)
     x = sum_array[0].to_i
-    puts x
     sum_array.each_with_index do |num, index|
       x -= num.to_i unless index == 0
     end
@@ -42,5 +43,9 @@ class Sumcheck
       x = num.to_i
     end
     return x
+  end
+
+  def divide(sum_array)
+    x = sum_array[0].to_i / sum_array[2].to_i
   end
 end

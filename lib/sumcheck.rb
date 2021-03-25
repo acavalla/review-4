@@ -10,8 +10,15 @@ class Sumcheck
 
   def sum_evaluation(sum_array)
     x = 0
-    sum_array.each do |num|
-      x += num.to_i
+    if sum_array[1] == "+"
+      sum_array.each do |num|
+        x += num.to_i
+      end
+    else
+      sum_array.each do |num|
+        x = 1
+        x = num.to_i
+      end
     end
     return x
   end

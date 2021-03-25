@@ -10,8 +10,12 @@ describe Sumcheck do
       expect(subject.scan("1 + 1")).to eq ["1 + 1", 2]
     end
 
-    it 'returns an array of the sum and the evaluated sum' do
+    it 'can add for + operations' do
       expect(subject.scan("1 + 2")).to eq ["1 + 2", 3]
+    end
+
+    it 'can multiply for * operations' do
+      expect(subject.scan("1 * 2")).to eq ["1 * 2", 2]
     end
   end
 end

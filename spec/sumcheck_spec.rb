@@ -16,6 +16,7 @@ describe Sumcheck do
 
     it 'can multiply for * operations' do
       expect(subject.scan("1 * 2")).to eq ["1 * 2", 2]
+      expect(subject.scan("4 * 2")).to eq ["4 * 2", 8]
     end
 
     it 'can subtract for - operations' do

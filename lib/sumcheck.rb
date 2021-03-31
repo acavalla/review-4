@@ -10,11 +10,12 @@ class Sumcheck
   private
 
   def sum_filter(sum_array)
-    if sum_array[1] == "+"
+    case sum_array[1]
+    when "+"
       add(sum_array)
-    elsif sum_array[1] == "*"
+    when "*"
       multiply(sum_array)
-    elsif sum_array[1] == "-"
+    when "-"
       subtract(sum_array)
     else
       divide(sum_array)
